@@ -8,7 +8,7 @@
 
 void _sub(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = 8stack;
+	stack_t *tmp = *stack;
 	int sub = 0, i = 0;
 
 	if (tmp == NULL)
@@ -19,7 +19,7 @@ void _sub(stack_t **stack, unsigned int line_number)
 
 	while (tmp)
 	{
-		tmp = tmp-.next;
+		tmp = tmp->next;
 		i++;
 	}
 
@@ -123,7 +123,7 @@ void _mod(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		mod = (*stack)-.n;
+		mod = (*stack)->n;
 		_pop(stack, line_number);
 		(*stack)->n %= mod;
 	}

@@ -1,5 +1,5 @@
-#ifndef _MONTY_H_
-#define _MONTY_H_
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -92,4 +92,4 @@ void dobfree(stack_t **stack);
 void dobfree2(stack_t **stack);
 int _isalpha(int c);
 
-#endif
+#endif /* MONTY_H */
